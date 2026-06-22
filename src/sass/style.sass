@@ -1,0 +1,569 @@
+$BLACK: #202020
+$LIGHTGREY: #D9D9D9
+$SHADOW: #00000040
+$BLUE: #8EACCD
+$LIGHTBLUE: #C1CFEA
+
+@font-face
+    font-family: "JejuMyeongjo"
+    font-style: normal
+    font-weight: 400
+    src: url("../fonts/JejuMyeongjo-Regular.woff2")
+@font-face
+    font-family: "EB Garamond"
+    font-style: normal
+    font-weight: 500
+    src: url("../fonts/EBGaramond-Medium.woff2")
+
+*
+    box-sizing: border-box
+
+body
+    font-family: "JejuMyeongjo"
+    height: 100vh
+    display: flex
+    flex-direction: column
+
+h1, h2, h3, h4, h5
+    padding: 0
+    margin: 0
+
+h1
+    font-size: 48px
+h2
+    font-size: 36px
+
+p
+    font-size: 12px
+
+a
+    color: black
+    text-decoration: none
+
+input
+    &[type=text]
+        background: white
+        border: 3px solid $BLUE
+        border-radius: 40px
+        font-size: 20px
+        padding: 12px 0 12px 41px
+    &[type=submit]
+        outline: none
+        border: none
+        cursor: pointer
+        background: $LIGHTBLUE
+        border-radius: 50px
+        padding: 20px
+        font-size: 24px
+
+.container
+    max-width: 1340px
+    margin: 0 auto
+    &_small
+        max-width: 1114px
+
+.header
+    background: $BLACK
+    &__container
+        display: flex
+        justify-content: center
+        align-items: center
+        column-gap: 146px
+    &__link
+        color: white
+        font-size: 16px
+        &_active
+            color: $BLUE
+
+.main
+    flex: 1
+
+.footer
+    background: $BLACK
+    &__container
+        position: relative
+        height: 350px
+        padding-top: 41px
+        display: flex
+        align-items: flex-end
+    &__left-wrapper
+        flex-grow: 1
+        overflow: hidden
+    &__right-wrapper
+        position: relative
+        right: -50px
+        flex-grow: 1
+        height: 100%
+        display: flex
+        column-gap: 36px
+    &__logo
+        font-family: "EB Garamond"
+        font-weight: 500
+        color: white
+        font-size: 128px
+    &__block
+        width: 364px
+        height: 266px
+        background: white
+        &_contacts
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            row-gap: 4px
+            a
+                font-family: "EB Garamond"
+                font-weight: 500
+                font-size: 24px
+                text-transform: uppercase
+    &__nav
+        font-family: "EB Garamond"
+        font-weight: 500
+        font-size: 24px
+        line-height: 35px
+        text-transform: uppercase
+        display: flex
+        flex-direction: column
+        row-gap: 10px
+        margin: 45px auto auto 95px
+
+.feedback
+    form
+        display: flex
+        flex-direction: column
+        align-items: center
+        &>h1
+            max-width: 277px
+            text-align: center
+            margin-bottom: 76px
+        input[type=text]
+            width: 750px
+            margin-bottom: 30px
+        input[type=submit]
+            width: 246px
+            margin-top: 74px
+
+// Стили главной страницы
+
+.index
+    &>h1
+        margin-bottom: 102px
+        text-align: center
+    &__pricelist
+        margin-bottom: 130px
+    &__about
+        margin-bottom: 131px
+    &__feedback
+        margin-bottom: 130px
+.pricelist
+    &>h1
+        margin-bottom: 65px
+    ul
+        display: flex
+        flex-direction: column
+        row-gap: 60px
+    &__price-title
+        padding: 8px 0 8px 114px
+        text-shadow: 0 4px 4px 0 $SHADOW
+        background-image: url("../img/services/bg-top.png")
+        background-size: cover
+    &__price-desc
+        padding: 10px 10px 30px 434px
+        background-image: url("../img/services/bg-bottom.png")
+        background-size: cover
+        &>p:first-child
+            margin-bottom: 36px
+    &__price-wrapper
+        display: flex
+        flex-direction: column
+        row-gap: 10px
+    &__price
+        font-size: 16px
+.about
+    &>h1
+        text-align: center
+        margin-bottom: 65px
+    &>p
+        font-size: 24px
+        &:last-of-type
+            margin-bottom: 53px
+    &__services-wrapper
+        &>h2
+            margin-bottom: 42px
+        ul
+            display: flex
+            justify-content: space-between
+            li
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: center
+                row-gap: 10px
+                span
+                    text-align: center
+                    font-size: 20px
+
+// Стили контактов
+
+.contacts
+    &__contacts
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        margin-bottom: 180px
+        h1
+            margin-bottom: 15px
+        p
+            font-family: "EB Garamond"
+            font-weight: 500
+            font-size: 24px
+            text-transform: uppercase
+            text-align: center
+            margin-bottom: 37px
+            max-width: 569px
+            line-height: 31px
+        a
+            font-family: "EB Garamond"
+            font-weight: 500
+            font-size: 24px
+            text-transform: uppercase
+    &__links
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        row-gap: 4px
+    &__feedback
+        margin-bottom: 162px
+        form
+            h1
+                margin-bottom: 24px
+
+// Стили услуг
+
+.categories
+    &__title-wrapper
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        margin-bottom: 60px
+        p
+            font-size: 16px
+    &__cat-wrapper
+        display: flex
+        flex-direction: column
+        row-gap: 100px
+        flex-wrap: wrap
+        max-height: 1000px
+        margin-bottom: 57px
+.category
+    display: flex
+    column-gap: 10px
+    &__right-wrapper
+        display: flex
+        flex-direction: column
+        row-gap: 20px
+    h2
+        font-size: 20px
+    &__block
+        display: flex
+        flex-direction: column
+        row-gap: 20px
+        h3
+            font-size: 16px
+            margin-top: 14px
+        a
+            font-size: 12px
+            text-decoration: underline
+            max-width: 523px
+
+// медиа запросы
+
+@media screen and ( max-width: 1439px )
+    h1
+        font-size: 32px
+    h2
+        font-size: 24px
+
+    p
+        font-size: 8px
+
+    .feedback
+        width: 100%
+        form
+            display: flex
+            flex-direction: column
+            align-items: center
+            &>h1
+                max-width: 277px
+                text-align: center
+                margin-bottom: 10px
+            input[type=text]
+                width: 100%
+                margin-bottom: 30px
+            input[type=submit]
+                width: 246px
+                margin-top: 20px
+
+    .footer
+        &__container
+            position: relative
+            height: 243px
+        &__right-wrapper
+            column-gap: 20px
+        &__logo
+            font-size: 96px
+        &__block
+            width: 202px
+            height: 165px
+            &_contacts
+                row-gap: 15px
+                a
+                    font-size: 16px
+        &__nav
+            font-size: 16px
+            row-gap: 0
+            margin: 6px auto auto 66px
+
+    .container
+        max-width: 668px
+        &_small
+            max-width: 668px
+    .index
+        display: flex
+        flex-direction: column
+        align-items: center
+        &>h1
+            max-width: 376px
+        &__pricelist
+            margin-bottom: 48px
+        &__about
+            margin-bottom: 48px
+        &__feedback
+            margin-bottom: 100px
+    .pricelist
+        &>h1
+            margin-bottom: 0
+        ul
+            display: flex
+            flex-direction: column
+            row-gap: 30px
+        &__price-title
+            padding: 8px 0 8px 66px
+        &__price-desc
+            padding: 0 0 5px 172px
+        &__price-wrapper
+            row-gap: 3px
+            margin-left: 86px
+        &__price
+            font-size: 12px
+    .about
+        &>h1
+            margin-bottom: 10px
+        &>p
+            font-size: 14px
+            &:last-of-type
+                margin-bottom: 78px
+        &__services-wrapper
+            &>h2
+                margin-bottom: 10px
+            ul
+                li
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    justify-content: center
+                    row-gap: 25px
+                    span
+                        font-size: 20px
+
+    .contacts
+        &__contacts
+            margin-bottom: 68px
+            h1
+                margin-bottom: 0
+            p
+                font-size: 20px
+                margin-bottom: 12px
+                line-height: 26px
+            a
+                font-size: 16px
+        &__feedback
+            margin-bottom: 100px
+            form
+                h1
+                    margin-bottom: 10px
+                    max-width: 171px
+
+    .categories
+        &__cat-wrapper
+            max-height: none
+
+@media screen and ( max-width: 767px )
+    .container
+        max-width: 293px
+        &_small
+            max-width: 293px
+
+    h1
+        font-size: 20px
+    h2
+        font-size: 14px
+
+    p
+        font-size: 8px
+
+    input
+        &[type=text]
+            font-size: 12px
+            padding: 6px 0 6px 16px
+        &[type=submit]
+            padding: 5px 20px
+            font-size: 16px
+
+    .feedback
+        width: 100%
+        form
+            &>h1
+                max-width: 167px
+                margin-bottom: 20px
+            input[type=text]
+                width: 100%
+                margin-bottom: 20px
+            input[type=submit]
+                width: 137px
+                margin-top: 0
+
+    .header
+        &__container
+            column-gap: 37px
+        &__link
+            font-size: 10px
+            img
+                width: 98px
+
+    .footer
+        &__container
+            height: 146px
+            padding-top: 33px
+        &__left-wrapper
+            overflow: visible
+        &__right-wrapper
+            column-gap: 20px
+        &__logo
+            font-size: 32px
+        &__block
+            width: 108px
+            height: 74px
+            background: $LIGHTGREY
+            &_contacts
+                row-gap: 0
+                a
+                    font-size: 10px
+        &__nav
+            font-size: 10px
+            line-height: 10px
+            height: 100%
+            justify-content: space-around
+            margin: 0 auto
+            text-transform: none
+            text-align: center
+
+    .index
+        &>h1
+            margin-bottom: 22px
+            width: 383px
+        &__pricelist
+            margin-bottom: 80px
+        &__about
+            margin-bottom: 80px
+        &__feedback
+            margin-bottom: 100px
+    .pricelist
+        &>h1
+            margin-bottom: 20px
+            text-align: center
+        ul
+            row-gap: 20px
+        &__price-title
+            padding: 2px 0 2px 58px
+            font-size: 14px
+        &__price-desc
+            padding: 0 0 10px 0
+            &>p:first-child
+                margin-bottom: 2px
+        &__price-wrapper
+            display: flex
+            flex-direction: column
+            row-gap: 5px
+        &__price
+            font-size: 14px
+    .about
+        &>h1
+            margin-bottom: 20px
+        &>p
+            font-size: 8px
+            &:last-of-type
+                margin-bottom: 53px
+        &__services-wrapper
+            &>h2
+                margin-bottom: 20px
+            ul
+                li
+                    row-gap: 0
+                    span
+                        font-size: 8px
+                    img
+                        width: 40px
+
+    .contacts
+        &__contacts
+            margin-bottom: 100px
+            h1
+                margin-bottom: 0
+            p
+                font-size: 14px
+                margin-bottom: 6px
+                width: 361px
+                line-height: 18px
+            a
+                font-size: 14px
+        &__links
+            row-gap: 10px
+        &__feedback
+            margin-bottom: 100px
+            form
+                h1
+                    max-width: 123px
+                    margin-bottom: 20px
+
+    .categories
+        max-width: 100%
+        &__title-wrapper
+            margin-bottom: 30px
+            p
+                font-size: 8px
+                width: 308px
+        &__cat-wrapper
+            row-gap: 30px
+            margin-bottom: 100px
+    .category
+        display: flex
+        column-gap: 0
+        &__left-wrapper
+            img
+                width: 40px
+        &__right-wrapper
+            row-gap: 12px
+        h2
+            font-size: 16px
+        &__block
+            row-gap: 12px
+            h3
+                font-size: 12px
+                margin-top: 0
+            a
+                font-size: 10px
+                max-width: 346px
